@@ -34,7 +34,7 @@ Visualizer by @o-reo [here](https://github.com/o-reo/push_swap_visualizer)
 make
 ```
 ### Usage
-```
+```console
 ./push_swap [numbers...]
 ```
 ##### Arguments
