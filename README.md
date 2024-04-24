@@ -56,11 +56,11 @@ To launch push_swap with 100 arguments:
 
 
 To run the checker,
-```
+```console
 ./checker [numbers]
 ```
 Then, you have to input operations. One operation each time then press Enter. After finished, press command + D or CTRL + D. For example:
-```
+```console
 $>./checker 3 2 1
 sa
 ra
@@ -72,7 +72,7 @@ KO
 ```
 
 You can run push_swap and then send the result to the checker to check it.
-```
+```console
 ARG="3 2 1"; ./push_swap $ARG | ./checker $ARG
 ```
 
