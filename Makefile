@@ -6,7 +6,7 @@
 #    By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 15:24:20 by jlanza            #+#    #+#              #
-#    Updated: 2022/12/29 20:01:12 by jlanza           ###   ########.fr        #
+#    Updated: 2024/04/24 16:37:53 by jlanza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ $(NAME): $(OBJ) $(HEADER)
 	$(MAKE) bonus -C ./libft
 	$(CC) -o $(NAME) $(OBJ) libft/libft.a
 
-all: $(NAME)
+all: $(NAME) $(NAME_BONUS)
 
 $(NAME_BONUS): $(OBJ_B) $(HEADER) $(HEADER_BONUS)
 	$(MAKE) -C ./libft
