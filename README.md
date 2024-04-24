@@ -2,6 +2,9 @@
 
 Sorting with 2 stacks
 
+![Alt Text](./readme/push_swap.gif)
+Visualizer by @o-reo [here](https://github.com/o-reo/push_swap_visualizer)
+
 ## About this project
 - This is an individual project at [School 42](https://42.fr/en/homepage/).
 - The goal of this project is to sort a stack A in ascending order using another stack B.
@@ -25,8 +28,6 @@ Sorting with 2 stacks
     * **checker**: this program will take the numbers, read the operations and check if the numbers are sorted or not.
 
 
-![Alt Text](./readme/push_swap.gif)
-Visualizer by @o-reo [here](https://github.com/o-reo/push_swap_visualizer)
 
 ## Usage (linux)
 ### Compilation
