@@ -2,7 +2,7 @@
 
 Sorting with 2 stacks
 
-![Alt Text](./readme/push_swap.gif)
+![Alt Text](./readme/push_swap.webp)
 Visualizer by @o-reo [here](https://github.com/o-reo/push_swap_visualizer)
 
 ## About this project
