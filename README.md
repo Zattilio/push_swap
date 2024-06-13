@@ -127,4 +127,9 @@ My result :
 * For 100 numbers : about 600 instructions, never over 640
 * For 500 numbers : about 4400 instructions, never over 4600
 
-[Here](https://github.com/lanzaj/tester_pushswap) is a link to simple scripts I made to test this project.
+## Test
+
+To test this project, launch the following script :
+```console
+./test.sh
+```

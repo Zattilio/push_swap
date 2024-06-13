@@ -29,12 +29,12 @@ SRC =	main.c \
 		sort/smaller_on_top.c \
 		sort/divide_a.c
 
-BONUS =	checker_bonus/checker_bonus.c \
-		checker_bonus/checker_utils_bonus.c \
-		checker_bonus/push_bonus.c \
-		checker_bonus/reverse_rotate_bonus.c \
-		checker_bonus/rotate_bonus.c \
-		checker_bonus/swap_bonus.c \
+BONUS =	checker_src/checker.c \
+		checker_src/checker_utils.c \
+		checker_src/push.c \
+		checker_src/reverse_rotate.c \
+		checker_src/rotate.c \
+		checker_src/swap.c \
 		parsing/sort_param.c \
 		parsing/parse.c \
 		parsing/check_arg.c \
@@ -45,38 +45,35 @@ OBJ = ${SRC:.c=.o}
 OBJ_B = ${BONUS:.c=.o}
 
 NAME = push_swap
-NAME_BONUS = checker
-CFLAGS = -Wall -Wextra -Werror -g
+CHECKER = checker
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 RM = rm -f
 HEADER = push_swap.h
-HEADER_BONUS = checker_bonus/checker_bonus.h
+HEADER = checker_src/checker.h
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+all: $(NAME) $(CHECKER)
+
 $(NAME): $(OBJ) $(HEADER)
 	$(MAKE) -C ./libft
-	$(MAKE) bonus -C ./libft
 	$(CC) -o $(NAME) $(OBJ) libft/libft.a
 
-all: $(NAME) $(NAME_BONUS)
-
-$(NAME_BONUS): $(OBJ_B) $(HEADER) $(HEADER_BONUS)
+$(CHECKER): $(OBJ_B) $(HEADER) $(HEADER)
 	$(MAKE) -C ./libft
-	$(MAKE) bonus -C ./libft
-	$(CC) -o $(NAME_BONUS) $(OBJ_B) libft/libft.a
-
-bonus: $(NAME_BONUS)
+	$(CC) -o $(CHECKER) $(OBJ_B) libft/libft.a
+	chmod +x ./test.sh
 
 clean:
 	$(RM) $(OBJ) $(OBJ_B)
 	$(MAKE) fclean -C ./libft
 
 fclean: clean
-	$(RM) $(NAME) $(NAME_BONUS)
+	$(RM) $(NAME) $(CHECKER)
 
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re checker

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.h                                    :+:      :+:    :+:   */
+/*   checker.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlanza <jlanza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_BONUS_H
-# define CHECKER_BONUS_H
+#ifndef CHECKER_H
+# define CHECKER_H
 
 # include "../libft/libft.h"
 # include "../push_swap.h"

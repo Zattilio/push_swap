@@ -44,9 +44,8 @@ SRC =	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		get_next_line/get_next_line.c \
-		get_next_line/get_next_line_utils.c
-
-BONUS =	ft_lstadd_front.c \
+		get_next_line/get_next_line_utils.c \
+		ft_lstadd_front.c \
 		ft_lstnew.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -57,11 +56,10 @@ BONUS =	ft_lstadd_front.c \
 		ft_lstmap.c
 
 OBJ = ${SRC:.c=.o}
-OBJ_B = ${BONUS:.c=.o}
 
 AR = ar rcs
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 RM = rm -f
 HEADER = libft.h get_next_line/get_next_line.h
@@ -71,9 +69,6 @@ HEADER = libft.h get_next_line/get_next_line.h
 
 $(NAME): $(OBJ) $(HEADER)
 	$(AR) $(NAME) $(OBJ)
-
-bonus: $(OBJ_B) $(HEADER)
-	$(AR) $(NAME) $(OBJ_B)
 
 all: $(NAME)
 
@@ -85,4 +80,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re
